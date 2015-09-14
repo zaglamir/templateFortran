@@ -1,0 +1,1103 @@
+1                                                                              
+ ******************************************************************************
+ ******************************************************************************
+ **                                                                          **
+ **                                                                          **
+ **              *......*                  Welcome to the Lund Monte Carlo!  **
+ **         *:::!!:::::::::::*                                               **
+ **      *::::::!!::::::::::::::*          PPP  Y   Y TTTTT H   H III   A    **
+ **    *::::::::!!::::::::::::::::*        P  P  Y Y    T   H   H  I   A A   **
+ **   *:::::::::!!:::::::::::::::::*       PPP    Y     T   HHHHH  I  AAAAA  **
+ **   *:::::::::!!:::::::::::::::::*       P      Y     T   H   H  I  A   A  **
+ **    *::::::::!!::::::::::::::::*!       P      Y     T   H   H III A   A  **
+ **      *::::::!!::::::::::::::* !!                                         **
+ **      !! *:::!!:::::::::::*    !!       This is PYTHIA version 6.428      **
+ **      !!     !* -><- *         !!       Last date of change:  5 Sep 2013  **
+ **      !!     !!                !!                                         **
+ **      !!     !!                !!       Now is  0 Jan 2000 at  0:00:00    **
+ **      !!                       !!                                         **
+ **      !!        lh             !!       Disclaimer: this program comes    **
+ **      !!                       !!       without any guarantees. Beware    **
+ **      !!                 hh    !!       of errors and use common sense    **
+ **      !!    ll                 !!       when interpreting results.        **
+ **      !!                       !!                                         **
+ **      !!                                Copyright T. Sjostrand (2011)     **
+ **                                                                          **
+ ** An archive of program versions and documentation is found on the web:    **
+ ** http://www.thep.lu.se/~torbjorn/Pythia.html                              **
+ **                                                                          **
+ ** When you cite this program, the official reference is to the 6.4 manual: **
+ ** T. Sjostrand, S. Mrenna and P. Skands, JHEP05 (2006) 026                 **
+ ** (LU TP 06-13, FERMILAB-PUB-06-052-CD-T) [hep-ph/0603175].                **
+ **                                                                          **
+ ** Also remember that the program, to a large extent, represents original   **
+ ** physics research. Other publications of special relevance to your        **
+ ** studies may therefore deserve separate mention.                          **
+ **                                                                          **
+ ** Main author: Torbjorn Sjostrand; Department of Theoretical Physics,      **
+ **   Lund University, Solvegatan 14A, S-223 62 Lund, Sweden;                **
+ **   phone: + 46 - 46 - 222 48 16; e-mail: torbjorn@thep.lu.se              **
+ ** Author: Stephen Mrenna; Computing Division, GDS Group,                   **
+ **   Fermi National Accelerator Laboratory, MS 234, Batavia, IL 60510, USA; **
+ **   phone: + 1 - 630 - 840 - 2556; e-mail: mrenna@fnal.gov                 **
+ ** Author: Peter Skands; CERN/PH-TH, CH-1211 Geneva, Switzerland            **
+ **   phone: + 41 - 22 - 767 24 47; e-mail: peter.skands@cern.ch             **
+ **                                                                          **
+ **                                                                          **
+ ******************************************************************************
+ ******************************************************************************
+1****************** PYINIT: initialization of PYTHIA routines *****************
+
+ ==============================================================================
+ I                                                                            I
+ I              PYTHIA will be initialized for a p on p collider              I
+ I                  at    200.000 GeV center-of-mass energy                   I
+ I                                                                            I
+ ==============================================================================
+
+ ******** PYMAXI: summary of differential cross-section maximum search ********
+
+           ==========================================================
+           I                                      I                 I
+           I  ISUB  Subprocess name               I  Maximum value  I
+           I                                      I                 I
+           ==========================================================
+           I                                      I                 I
+           I   95   Low-pT scattering             I    2.7637D+01   I
+           I   96   Semihard QCD 2 -> 2           I    1.2074D+04   I
+           I                                      I                 I
+           ==========================================================
+
+ ****** PYMULT: initialization of multiple interactions for MSTP(82) = 4 ******
+        pT0 = 1.15 GeV gives sigma(parton-parton) = 5.03D+02 mb: accepted
+
+ ****** PYMIGN: initialization of multiple interactions for MSTP(82) = 4 ******
+        pT0 = 1.15 GeV gives sigma(parton-parton) = 1.76D+02 mb: accepted
+
+ ********************** PYINIT: initialization completed **********************
+1*************************** PYSTAT:  Decay Widths and Branching Ratios ***************************
+
+ ==================================================================================================
+ I                                                 I             I            I      I            I
+ I     Mother  -->  Branching/Decay Channel        I Width (GeV) I       B.R. I Stat I  Eff. B.R. I
+ I                                                 I             I            I      I            I
+ ==================================================================================================
+ I                                                 I             I            I      I            I
+ I        1  d            (m =     0.330)  -->     I   0.000D+00 I  0.000D+00 I off  I  0.000D+00 I
+ I        1  g          + d                        I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I        2  gamma      + d                        I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I        3  Z0         + d                        I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I        4  W-         + u                        I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I        5  W-         + c                        I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I        6  W-         + t                        I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I        8  h0         + d                        I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I                                                 I             I            I      I            I
+ I        2  u            (m =     0.330)  -->     I   0.000D+00 I  0.000D+00 I off  I  0.000D+00 I
+ I        9  g          + u                        I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I       10  gamma      + u                        I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I       11  Z0         + u                        I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I       12  W+         + d                        I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I       13  W+         + s                        I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I       14  W+         + b                        I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I       16  h0         + u                        I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I                                                 I             I            I      I            I
+ I        3  s            (m =     0.500)  -->     I   0.000D+00 I  0.000D+00 I off  I  0.000D+00 I
+ I       17  g          + s                        I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I       18  gamma      + s                        I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I       19  Z0         + s                        I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I       20  W-         + u                        I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I       21  W-         + c                        I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I       22  W-         + t                        I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I       24  h0         + s                        I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I                                                 I             I            I      I            I
+ I        4  c            (m =     1.250)  -->     I   0.000D+00 I  0.000D+00 I off  I  0.000D+00 I
+ I       25  g          + c                        I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I       26  gamma      + c                        I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I       27  Z0         + c                        I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I       28  W+         + d                        I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I       29  W+         + s                        I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I       30  W+         + b                        I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I       32  h0         + c                        I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I                                                 I             I            I      I            I
+ I        5  b            (m =     4.800)  -->     I   0.000D+00 I  0.000D+00 I off  I  0.000D+00 I
+ I       33  g          + b                        I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I       34  gamma      + b                        I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I       35  Z0         + b                        I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I       36  W-         + u                        I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I       37  W-         + c                        I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I       38  W-         + t                        I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I       40  h0         + b                        I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I                                                 I             I            I      I            I
+ I        6  t            (m =   175.000)  -->     I   1.398D+00 I  1.000D+00 I on   I  1.000D+00 I
+ I       41  g          + t                        I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I       42  gamma      + t                        I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I       43  Z0         + t                        I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I       44  W+         + d                        I   4.206D-05 I  3.008D-05 I on   I  3.008D-05 I
+ I       45  W+         + s                        I   2.467D-03 I  1.765D-03 I on   I  1.765D-03 I
+ I       46  W+         + b                        I   1.396D+00 I  9.982D-01 I on   I  9.982D-01 I
+ I       48  h0         + t                        I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I       49  H+         + b                        I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I       50  ~chi_10    + ~t_1                     I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I       51  ~chi_20    + ~t_1                     I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I       52  ~chi_30    + ~t_1                     I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I       53  ~chi_40    + ~t_1                     I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I       54  ~g         + ~t_1                     I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I       55  ~Gravitino + ~t_1                     I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I                                                 I             I            I      I            I
+ I       11  e-           (m =     0.001)  -->     I   0.000D+00 I  0.000D+00 I off  I  0.000D+00 I
+ I       76  gamma      + e-                       I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I       77  Z0         + e-                       I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I       78  W-         + nu_e                     I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I       79  h0         + e-                       I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I                                                 I             I            I      I            I
+ I       12  nu_e         (m =     0.000)  -->     I   0.000D+00 I  0.000D+00 I off  I  0.000D+00 I
+ I       80  Z0         + nu_e                     I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I       81  W+         + e-                       I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I                                                 I             I            I      I            I
+ I       13  mu-          (m =     0.106)  -->     I   0.000D+00 I  0.000D+00 I off  I  0.000D+00 I
+ I       83  gamma      + mu-                      I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I       84  Z0         + mu-                      I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I       85  W-         + nu_mu                    I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I       86  h0         + mu-                      I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I                                                 I             I            I      I            I
+ I       14  nu_mu        (m =     0.000)  -->     I   0.000D+00 I  0.000D+00 I off  I  0.000D+00 I
+ I       87  Z0         + nu_mu                    I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I       88  W+         + mu-                      I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I                                                 I             I            I      I            I
+ I       15  tau-         (m =     1.777)  -->     I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I      139  gamma      + tau-                     I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I      140  Z0         + tau-                     I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I      141  W-         + nu_tau                   I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I      142  h0         + tau-                     I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I                                                 I             I            I      I            I
+ I       16  nu_tau       (m =     0.000)  -->     I   0.000D+00 I  0.000D+00 I off  I  0.000D+00 I
+ I      143  Z0         + nu_tau                   I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I      144  W+         + tau-                     I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I                                                 I             I            I      I            I
+ I       21  g            (m =     0.000)  -->     I   0.000D+00 I  0.000D+00 I off  I  0.000D+00 I
+ I      153  d          + dbar                     I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I      154  u          + ubar                     I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I      155  s          + sbar                     I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I      156  c          + cbar                     I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I      157  b          + bbar                     I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I      158  t          + tbar                     I   0.000D+00 I  0.000D+00 I off  I  0.000D+00 I
+ I      161  g          + g                        I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I                                                 I             I            I      I            I
+ I       22  gamma        (m =     0.000)  -->     I   0.000D+00 I  0.000D+00 I off  I  0.000D+00 I
+ I      162  d          + dbar                     I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I      163  u          + ubar                     I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I      164  s          + sbar                     I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I      165  c          + cbar                     I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I      166  b          + bbar                     I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I      167  t          + tbar                     I   0.000D+00 I  0.000D+00 I off  I  0.000D+00 I
+ I      170  e-         + e+                       I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I      171  mu-        + mu+                      I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I      172  tau-       + tau+                     I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I                                                 I             I            I      I            I
+ I       23  Z0           (m =    91.188)  -->     I   2.478D+00 I  1.000D+00 I on   I  1.000D+00 I
+ I      174  d          + dbar                     I   3.816D-01 I  1.540D-01 I on   I  1.540D-01 I
+ I      175  u          + ubar                     I   2.959D-01 I  1.194D-01 I on   I  1.194D-01 I
+ I      176  s          + sbar                     I   3.816D-01 I  1.540D-01 I on   I  1.540D-01 I
+ I      177  c          + cbar                     I   2.957D-01 I  1.193D-01 I on   I  1.193D-01 I
+ I      178  b          + bbar                     I   3.774D-01 I  1.523D-01 I on   I  1.523D-01 I
+ I      179  t          + tbar                     I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I      182  e-         + e+                       I   8.321D-02 I  3.357D-02 I on   I  3.357D-02 I
+ I      183  nu_e       + nu_ebar                  I   1.656D-01 I  6.680D-02 I on   I  6.680D-02 I
+ I      184  mu-        + mu+                      I   8.321D-02 I  3.357D-02 I on   I  3.357D-02 I
+ I      185  nu_mu      + nu_mubar                 I   1.656D-01 I  6.680D-02 I on   I  6.680D-02 I
+ I      186  tau-       + tau+                     I   8.302D-02 I  3.350D-02 I on   I  3.350D-02 I
+ I      187  nu_tau     + nu_taubar                I   1.656D-01 I  6.680D-02 I on   I  6.680D-02 I
+ I                                                 I             I            I      I            I
+ I       24  W+           (m =    80.450)  -->     I   2.071D+00 I  1.000D+00 I on   I  1.000D+00 I
+ I      190  dbar       + u                        I   6.656D-01 I  3.214D-01 I on   I  3.214D-01 I
+ I      191  dbar       + c                        I   3.417D-02 I  1.650D-02 I on   I  1.650D-02 I
+ I      192  dbar       + t                        I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I      194  sbar       + u                        I   3.418D-02 I  1.650D-02 I on   I  1.650D-02 I
+ I      195  sbar       + c                        I   6.641D-01 I  3.206D-01 I on   I  3.206D-01 I
+ I      196  sbar       + t                        I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I      198  bbar       + u                        I   2.088D-05 I  1.008D-05 I on   I  1.008D-05 I
+ I      199  bbar       + c                        I   1.225D-03 I  5.913D-04 I on   I  5.913D-04 I
+ I      200  bbar       + t                        I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I      206  e+         + nu_e                     I   2.240D-01 I  1.082D-01 I on   I  1.082D-01 I
+ I      207  mu+        + nu_mu                    I   2.240D-01 I  1.082D-01 I on   I  1.082D-01 I
+ I      208  tau+       + nu_tau                   I   2.239D-01 I  1.081D-01 I on   I  1.081D-01 I
+ I                                                 I             I            I      I            I
+ I       25  h0           (m =   115.000)  -->     I   2.731D-03 I  1.000D+00 I on   I  1.000D+00 I
+ I      210  d          + dbar                     I   2.142D-09 I  7.846D-07 I on   I  7.931D-07 I
+ I      211  u          + ubar                     I   6.855D-10 I  2.510D-07 I on   I  2.538D-07 I
+ I      212  s          + sbar                     I   8.656D-07 I  3.170D-04 I on   I  3.204D-04 I
+ I      213  c          + cbar                     I   1.070D-04 I  3.919D-02 I on   I  3.962D-02 I
+ I      214  b          + bbar                     I   1.952D-03 I  7.148D-01 I on   I  7.225D-01 I
+ I      215  t          + tbar                     I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I      218  e-         + e+                       I   1.938D-11 I  7.098D-09 I on   I  7.175D-09 I
+ I      219  mu-        + mu+                      I   8.319D-07 I  3.047D-04 I on   I  3.080D-04 I
+ I      220  tau-       + tau+                     I   2.350D-04 I  8.605D-02 I on   I  8.699D-02 I
+ I      222  g          + g                        I   1.500D-04 I  5.494D-02 I on   I  5.554D-02 I
+ I      223  gamma      + gamma                    I   7.480D-06 I  2.739D-03 I on   I  2.769D-03 I
+ I      224  gamma      + Z0                       I   2.255D-06 I  8.259D-04 I on   I  8.349D-04 I
+ I      225  Z0         + Z0                       I   2.561D-05 I  9.381D-03 I on   I  7.824D-03 I
+ I      226  W+         + W-                       I   2.498D-04 I  9.150D-02 I on   I  8.327D-02 I
+ I      227  ~chi_10    + ~chi_10                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      228  ~chi_20    + ~chi_10                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      229  ~chi_20    + ~chi_20                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      230  ~chi_30    + ~chi_10                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      231  ~chi_30    + ~chi_20                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      232  ~chi_30    + ~chi_30                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      233  ~chi_40    + ~chi_10                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      234  ~chi_40    + ~chi_20                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      235  ~chi_40    + ~chi_30                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      236  ~chi_40    + ~chi_40                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      237  ~chi_1+    + ~chi_1-                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      238  ~chi_1+    + ~chi_2-                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      239  ~chi_2+    + ~chi_1-                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      240  ~chi_2+    + ~chi_2-                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      241  ~d_L       + ~d_Lbar                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      242  ~d_R       + ~d_Rbar                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      243  ~d_L       + ~d_Rbar                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      244  ~d_Lbar    + ~d_R                     I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      245  ~u_L       + ~u_Lbar                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      246  ~u_R       + ~u_Rbar                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      247  ~u_L       + ~u_Rbar                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      248  ~u_Lbar    + ~u_R                     I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      249  ~s_L       + ~s_Lbar                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      250  ~s_R       + ~s_Rbar                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      251  ~s_L       + ~s_Rbar                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      252  ~s_Lbar    + ~s_R                     I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      253  ~c_L       + ~c_Lbar                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      254  ~c_R       + ~c_Rbar                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      255  ~c_L       + ~c_Rbar                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      256  ~c_Lbar    + ~c_R                     I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      257  ~b_1       + ~b_1bar                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      258  ~b_2       + ~b_2bar                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      259  ~b_1       + ~b_2bar                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      260  ~b_1bar    + ~b_2                     I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      261  ~t_1       + ~t_1bar                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      262  ~t_2       + ~t_2bar                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      263  ~t_1       + ~t_2bar                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      264  ~t_1bar    + ~t_2                     I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      265  ~e_L-      + ~e_L+                    I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      266  ~e_R-      + ~e_R+                    I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      267  ~e_L-      + ~e_R+                    I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      268  ~e_L+      + ~e_R-                    I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      269  ~nu_eL     + ~nu_eLbar                I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      270  ~nu_eR     + ~nu_eRbar                I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      271  ~nu_eL     + ~nu_eRbar                I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      272  ~nu_eLbar  + ~nu_eR                   I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      273  ~mu_L-     + ~mu_L+                   I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      274  ~mu_R-     + ~mu_R+                   I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      275  ~mu_L-     + ~mu_R+                   I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      276  ~mu_L+     + ~mu_R-                   I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      277  ~nu_muL    + ~nu_muLbar               I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      278  ~nu_muR    + ~nu_muRbar               I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      279  ~nu_muL    + ~nu_muRbar               I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      280  ~nu_muLbar + ~nu_muR                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      281  ~tau_1-    + ~tau_1+                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      282  ~tau_2-    + ~tau_2+                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      283  ~tau_1-    + ~tau_2+                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      284  ~tau_1+    + ~tau_2-                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      285  ~nu_tauL   + ~nu_tauLba               I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      286  ~nu_tauR   + ~nu_tauRba               I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      287  ~nu_tauL   + ~nu_tauRba               I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      288  ~nu_tauLba + ~nu_tauR                 I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I                                                 I             I            I      I            I
+ I       32  Z'0          (m =   500.000)  -->     I   1.454D+01 I  1.000D+00 I on   I  1.000D+00 I
+ I      289  d          + dbar                     I   2.120D+00 I  1.458D-01 I on   I  1.458D-01 I
+ I      290  u          + ubar                     I   1.647D+00 I  1.133D-01 I on   I  1.133D-01 I
+ I      291  s          + sbar                     I   2.120D+00 I  1.458D-01 I on   I  1.458D-01 I
+ I      292  c          + cbar                     I   1.647D+00 I  1.133D-01 I on   I  1.133D-01 I
+ I      293  b          + bbar                     I   2.120D+00 I  1.458D-01 I on   I  1.458D-01 I
+ I      294  t          + tbar                     I   7.125D-01 I  4.900D-02 I on   I  4.900D-02 I
+ I      297  e-         + e+                       I   4.657D-01 I  3.202D-02 I on   I  3.202D-02 I
+ I      298  nu_e       + nu_ebar                  I   9.254D-01 I  6.364D-02 I on   I  6.364D-02 I
+ I      299  mu-        + mu+                      I   4.657D-01 I  3.202D-02 I on   I  3.202D-02 I
+ I      300  nu_mu      + nu_mubar                 I   9.254D-01 I  6.364D-02 I on   I  6.364D-02 I
+ I      301  tau-       + tau+                     I   4.656D-01 I  3.202D-02 I on   I  3.202D-02 I
+ I      302  nu_tau     + nu_taubar                I   9.254D-01 I  6.364D-02 I on   I  6.364D-02 I
+ I      305  W+         + W-                       I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      306  H+         + H-                       I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      307  Z0         + gamma                    I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      308  Z0         + h0                       I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      309  h0         + A0                       I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      310  H0         + A0                       I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I                                                 I             I            I      I            I
+ I       34  W'+          (m =   500.000)  -->     I   1.666D+01 I  1.000D+00 I on   I  1.000D+00 I
+ I      311  dbar       + u                        I   4.186D+00 I  2.512D-01 I on   I  2.512D-01 I
+ I      312  dbar       + c                        I   2.149D-01 I  1.290D-02 I on   I  1.290D-02 I
+ I      313  dbar       + t                        I   1.079D-04 I  6.475D-06 I on   I  6.475D-06 I
+ I      315  sbar       + u                        I   2.149D-01 I  1.290D-02 I on   I  1.290D-02 I
+ I      316  sbar       + c                        I   4.178D+00 I  2.508D-01 I on   I  2.508D-01 I
+ I      317  sbar       + t                        I   6.329D-03 I  3.799D-04 I on   I  3.799D-04 I
+ I      319  bbar       + u                        I   1.320D-04 I  7.923D-06 I on   I  7.923D-06 I
+ I      320  bbar       + c                        I   7.744D-03 I  4.648D-04 I on   I  4.648D-04 I
+ I      321  bbar       + t                        I   3.589D+00 I  2.154D-01 I on   I  2.154D-01 I
+ I      327  e+         + nu_e                     I   1.421D+00 I  8.531D-02 I on   I  8.531D-02 I
+ I      328  mu+        + nu_mu                    I   1.421D+00 I  8.531D-02 I on   I  8.531D-02 I
+ I      329  tau+       + nu_tau                   I   1.421D+00 I  8.531D-02 I on   I  8.531D-02 I
+ I      331  W+         + Z0                       I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      332  W+         + gamma                    I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      333  W+         + h0                       I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I                                                 I             I            I      I            I
+ I       35  H0           (m =   300.000)  -->     I   8.386D+00 I  1.000D+00 I on   I  1.000D+00 I
+ I      334  d          + dbar                     I   4.888D-09 I  5.829D-10 I on   I  5.829D-10 I
+ I      335  u          + ubar                     I   1.564D-09 I  1.865D-10 I on   I  1.865D-10 I
+ I      336  s          + sbar                     I   1.975D-06 I  2.355D-07 I on   I  2.355D-07 I
+ I      337  c          + cbar                     I   2.443D-04 I  2.913D-05 I on   I  2.913D-05 I
+ I      338  b          + bbar                     I   4.493D-03 I  5.358D-04 I on   I  5.358D-04 I
+ I      339  t          + tbar                     I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I      342  e-         + e+                       I   5.111D-11 I  6.095D-12 I on   I  6.095D-12 I
+ I      343  mu-        + mu+                      I   2.194D-06 I  2.616D-07 I on   I  2.616D-07 I
+ I      344  tau-       + tau+                     I   6.204D-04 I  7.398D-05 I on   I  7.398D-05 I
+ I      346  g          + g                        I   3.501D-03 I  4.175D-04 I on   I  4.175D-04 I
+ I      347  gamma      + gamma                    I   1.277D-04 I  1.522D-05 I on   I  1.522D-05 I
+ I      348  gamma      + Z0                       I   5.130D-04 I  6.117D-05 I on   I  6.118D-05 I
+ I      349  Z0         + Z0                       I   2.573D+00 I  3.068D-01 I on   I  3.068D-01 I
+ I      350  W+         + W-                       I   5.780D+00 I  6.892D-01 I on   I  6.892D-01 I
+ I      351  Z0         + h0                       I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I      352  h0         + h0                       I   2.423D-02 I  2.890D-03 I on   I  2.828D-03 I
+ I      353  W+         + H-                       I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I      354  H+         + W-                       I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I      355  Z0         + A0                       I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I      356  h0         + A0                       I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I      357  A0         + A0                       I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I      358  ~chi_10    + ~chi_10                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      359  ~chi_20    + ~chi_10                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      360  ~chi_20    + ~chi_20                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      361  ~chi_30    + ~chi_10                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      362  ~chi_30    + ~chi_20                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      363  ~chi_30    + ~chi_30                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      364  ~chi_40    + ~chi_10                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      365  ~chi_40    + ~chi_20                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      366  ~chi_40    + ~chi_30                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      367  ~chi_40    + ~chi_40                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      368  ~chi_1+    + ~chi_1-                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      369  ~chi_1+    + ~chi_2-                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      370  ~chi_2+    + ~chi_1-                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      371  ~chi_2+    + ~chi_2-                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      372  ~d_L       + ~d_Lbar                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      373  ~d_R       + ~d_Rbar                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      374  ~d_L       + ~d_Rbar                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      375  ~d_Lbar    + ~d_R                     I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      376  ~u_L       + ~u_Lbar                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      377  ~u_R       + ~u_Rbar                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      378  ~u_L       + ~u_Rbar                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      379  ~u_Lbar    + ~u_R                     I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      380  ~s_L       + ~s_Lbar                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      381  ~s_R       + ~s_Rbar                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      382  ~s_L       + ~s_Rbar                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      383  ~s_Lbar    + ~s_R                     I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      384  ~c_L       + ~c_Lbar                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      385  ~c_R       + ~c_Rbar                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      386  ~c_L       + ~c_Rbar                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      387  ~c_Lbar    + ~c_R                     I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      388  ~b_1       + ~b_1bar                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      389  ~b_2       + ~b_2bar                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      390  ~b_1       + ~b_2bar                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      391  ~b_1bar    + ~b_2                     I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      392  ~t_1       + ~t_1bar                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      393  ~t_2       + ~t_2bar                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      394  ~t_1       + ~t_2bar                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      395  ~t_1bar    + ~t_2                     I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      396  ~e_L-      + ~e_L+                    I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      397  ~e_R-      + ~e_R+                    I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      398  ~e_L-      + ~e_R+                    I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      399  ~e_L+      + ~e_R-                    I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      400  ~nu_eL     + ~nu_eLbar                I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      401  ~nu_eR     + ~nu_eRbar                I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      402  ~nu_eL     + ~nu_eRbar                I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      403  ~nu_eLbar  + ~nu_eR                   I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      404  ~mu_L-     + ~mu_L+                   I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      405  ~mu_R-     + ~mu_R+                   I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      406  ~mu_L-     + ~mu_R+                   I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      407  ~mu_L+     + ~mu_R-                   I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      408  ~nu_muL    + ~nu_muLbar               I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      409  ~nu_muR    + ~nu_muRbar               I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      410  ~nu_muL    + ~nu_muRbar               I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      411  ~nu_muLbar + ~nu_muR                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      412  ~tau_1-    + ~tau_1+                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      413  ~tau_2-    + ~tau_2+                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      414  ~tau_1-    + ~tau_2+                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      415  ~tau_1+    + ~tau_2-                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      416  ~nu_tauL   + ~nu_tauLba               I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      417  ~nu_tauR   + ~nu_tauRba               I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      418  ~nu_tauL   + ~nu_tauRba               I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      419  ~nu_tauLba + ~nu_tauR                 I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I                                                 I             I            I      I            I
+ I       36  A0           (m =   300.000)  -->     I   3.373D+00 I  1.000D+00 I on   I  1.000D+00 I
+ I      420  d          + dbar                     I   4.888D-09 I  1.449D-09 I on   I  1.465D-09 I
+ I      421  u          + ubar                     I   1.564D-09 I  4.637D-10 I on   I  4.687D-10 I
+ I      422  s          + sbar                     I   1.975D-06 I  5.855D-07 I on   I  5.919D-07 I
+ I      423  c          + cbar                     I   2.443D-04 I  7.243D-05 I on   I  7.321D-05 I
+ I      424  b          + bbar                     I   4.498D-03 I  1.333D-03 I on   I  1.348D-03 I
+ I      425  t          + tbar                     I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I      428  e-         + e+                       I   5.111D-11 I  1.515D-11 I on   I  1.532D-11 I
+ I      429  mu-        + mu+                      I   2.194D-06 I  6.504D-07 I on   I  6.574D-07 I
+ I      430  tau-       + tau+                     I   6.205D-04 I  1.840D-04 I on   I  1.859D-04 I
+ I      432  g          + g                        I   1.049D-02 I  3.110D-03 I on   I  3.144D-03 I
+ I      433  gamma      + gamma                    I   5.074D-05 I  1.504D-05 I on   I  1.521D-05 I
+ I      434  gamma      + Z0                       I   9.216D-06 I  2.732D-06 I on   I  2.762D-06 I
+ I      435  Z0         + Z0                       I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I      436  W+         + W-                       I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I      437  Z0         + h0                       I   3.357D+00 I  9.953D-01 I on   I  9.952D-01 I
+ I      438  h0         + h0                       I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I      439  W+         + H-                       I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I      440  H+         + W-                       I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I      441  ~chi_10    + ~chi_10                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      442  ~chi_20    + ~chi_10                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      443  ~chi_20    + ~chi_20                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      444  ~chi_30    + ~chi_10                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      445  ~chi_30    + ~chi_20                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      446  ~chi_30    + ~chi_30                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      447  ~chi_40    + ~chi_10                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      448  ~chi_40    + ~chi_20                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      449  ~chi_40    + ~chi_30                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      450  ~chi_40    + ~chi_40                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      451  ~chi_1+    + ~chi_1-                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      452  ~chi_1+    + ~chi_2-                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      453  ~chi_2+    + ~chi_1-                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      454  ~chi_2+    + ~chi_2-                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      455  ~d_L       + ~d_Lbar                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      456  ~d_R       + ~d_Rbar                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      457  ~d_L       + ~d_Rbar                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      458  ~d_Lbar    + ~d_R                     I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      459  ~u_L       + ~u_Lbar                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      460  ~u_R       + ~u_Rbar                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      461  ~u_L       + ~u_Rbar                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      462  ~u_Lbar    + ~u_R                     I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      463  ~s_L       + ~s_Lbar                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      464  ~s_R       + ~s_Rbar                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      465  ~s_L       + ~s_Rbar                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      466  ~s_Lbar    + ~s_R                     I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      467  ~c_L       + ~c_Lbar                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      468  ~c_R       + ~c_Rbar                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      469  ~c_L       + ~c_Rbar                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      470  ~c_Lbar    + ~c_R                     I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      471  ~b_1       + ~b_1bar                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      472  ~b_2       + ~b_2bar                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      473  ~b_1       + ~b_2bar                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      474  ~b_1bar    + ~b_2                     I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      475  ~t_1       + ~t_1bar                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      476  ~t_2       + ~t_2bar                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      477  ~t_1       + ~t_2bar                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      478  ~t_1bar    + ~t_2                     I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      479  ~e_L-      + ~e_L+                    I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      480  ~e_R-      + ~e_R+                    I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      481  ~e_L-      + ~e_R+                    I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      482  ~e_L+      + ~e_R-                    I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      483  ~nu_eL     + ~nu_eLbar                I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      484  ~nu_eR     + ~nu_eRbar                I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      485  ~nu_eL     + ~nu_eRbar                I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      486  ~nu_eLbar  + ~nu_eR                   I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      487  ~mu_L-     + ~mu_L+                   I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      488  ~mu_R-     + ~mu_R+                   I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      489  ~mu_L-     + ~mu_R+                   I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      490  ~mu_L+     + ~mu_R-                   I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      491  ~nu_muL    + ~nu_muLbar               I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      492  ~nu_muR    + ~nu_muRbar               I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      493  ~nu_muL    + ~nu_muRbar               I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      494  ~nu_muLbar + ~nu_muR                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      495  ~tau_1-    + ~tau_1+                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      496  ~tau_2-    + ~tau_2+                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      497  ~tau_1-    + ~tau_2+                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      498  ~tau_1+    + ~tau_2-                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      499  ~nu_tauL   + ~nu_tauLba               I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      500  ~nu_tauR   + ~nu_tauRba               I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      501  ~nu_tauL   + ~nu_tauRba               I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      502  ~nu_tauLba + ~nu_tauR                 I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I                                                 I             I            I      I            I
+ I       37  H+           (m =   300.000)  -->     I   4.141D+00 I  1.000D+00 I on   I  1.000D+00 I
+ I      503  dbar       + u                        I   1.223D-07 I  2.953D-08 I on   I  2.982D-08 I
+ I      504  sbar       + c                        I   5.915D-05 I  1.428D-05 I on   I  1.443D-05 I
+ I      505  bbar       + t                        I   3.405D-01 I  8.223D-02 I on   I  8.305D-02 I
+ I      507  e+         + nu_e                     I   1.278D-09 I  3.086D-10 I on   I  3.117D-10 I
+ I      508  mu+        + nu_mu                    I   5.485D-05 I  1.325D-05 I on   I  1.338D-05 I
+ I      509  tau+       + nu_tau                   I   1.551D-02 I  3.746D-03 I on   I  3.783D-03 I
+ I      511  W+         + h0                       I   3.785D+00 I  9.140D-01 I on   I  9.131D-01 I
+ I      512  ~chi_10    + ~chi_1+                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      513  ~chi_10    + ~chi_2+                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      514  ~chi_20    + ~chi_1+                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      515  ~chi_20    + ~chi_2+                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      516  ~chi_30    + ~chi_1+                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      517  ~chi_30    + ~chi_2+                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      518  ~chi_40    + ~chi_1+                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      519  ~chi_40    + ~chi_2+                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      520  ~t_1       + ~b_1bar                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      521  ~t_2       + ~b_1bar                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      522  ~t_1       + ~b_2bar                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      523  ~t_2       + ~b_2bar                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      524  ~d_Lbar    + ~u_L                     I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      525  ~s_Lbar    + ~c_L                     I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      526  ~e_L+      + ~nu_eL                   I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      527  ~mu_L+     + ~nu_muL                  I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      528  ~tau_1+    + ~nu_tauL                 I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I      529  ~tau_2+    + ~nu_tauL                 I   0.000D+00 I  0.000D+00 I ---- I  0.000D+00 I
+ I                                                 I             I            I      I            I
+ I       41  R0           (m =  5000.000)  -->     I   4.173D+02 I  1.000D+00 I on   I  1.000D+00 I
+ I      530  d          + sbar                     I   8.977D+01 I  2.151D-01 I on   I  2.151D-01 I
+ I      531  u          + cbar                     I   8.977D+01 I  2.151D-01 I on   I  2.151D-01 I
+ I      532  s          + bbar                     I   8.977D+01 I  2.151D-01 I on   I  2.151D-01 I
+ I      533  c          + tbar                     I   8.960D+01 I  2.147D-01 I on   I  2.147D-01 I
+ I      536  e-         + mu+                      I   2.919D+01 I  6.996D-02 I on   I  6.996D-02 I
+ I      537  mu-        + tau+                     I   2.919D+01 I  6.996D-02 I on   I  6.996D-02 I
+ I                                                 I             I            I      I            I
+ I       42  LQ_ue        (m =   200.000)  -->     I   3.916D-01 I  1.000D+00 I on   I  1.000D+00 I
+ I      539  u          + e-                       I   3.916D-01 I  1.000D+00 I on   I  1.000D+00 I
+ I                                                 I             I            I      I            I
+ I  3000111  pi_tc0       (m =   110.000)  -->     I   2.080D-02 I  1.000D+00 I on   I  1.000D+00 I
+ I     3996  s          + sbar                     I   5.074D-04 I  2.440D-02 I on   I  2.440D-02 I
+ I     3997  c          + cbar                     I   9.419D-04 I  4.529D-02 I on   I  4.529D-02 I
+ I     3998  b          + bbar                     I   1.729D-02 I  8.312D-01 I on   I  8.312D-01 I
+ I     3999  t          + tbar                     I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     4000  e-         + e+                       I   1.693D-10 I  8.141D-09 I on   I  8.141D-09 I
+ I     4001  mu-        + mu+                      I   7.267D-06 I  3.494D-04 I on   I  3.494D-04 I
+ I     4002  tau-       + tau+                     I   2.054D-03 I  9.878D-02 I on   I  9.878D-02 I
+ I     4003  g          + g                        I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I                                                 I             I            I      I            I
+ I  3000211  pi_tc+       (m =   110.000)  -->     I   1.195D-02 I  1.000D+00 I on   I  1.000D+00 I
+ I     4004  c          + dbar                     I   2.376D-04 I  1.988D-02 I on   I  1.988D-02 I
+ I     4005  c          + sbar                     I   2.798D-04 I  2.341D-02 I on   I  2.341D-02 I
+ I     4006  u          + bbar                     I   4.335D-03 I  3.628D-01 I on   I  3.628D-01 I
+ I     4007  c          + bbar                     I   6.582D-03 I  5.508D-01 I on   I  5.508D-01 I
+ I     4008  W+         + b          + bbar        I   1.254D-11 I  1.050D-09 I on   I  1.050D-09 I
+ I     4009  e+         + nu_e                     I   4.233D-11 I  3.542D-09 I on   I  3.542D-09 I
+ I     4010  mu+        + nu_mu                    I   1.817D-06 I  1.520D-04 I on   I  1.520D-04 I
+ I     4011  tau+       + nu_tau                   I   5.137D-04 I  4.299D-02 I on   I  4.299D-02 I
+ I                                                 I             I            I      I            I
+ I  3000221  pi'_tc0      (m =   110.000)  -->     I   3.705D-02 I  1.000D+00 I on   I  1.000D+00 I
+ I     4012  s          + sbar                     I   5.074D-04 I  1.369D-02 I on   I  1.369D-02 I
+ I     4013  c          + cbar                     I   9.419D-04 I  2.542D-02 I on   I  2.542D-02 I
+ I     4014  b          + bbar                     I   1.729D-02 I  4.666D-01 I on   I  4.666D-01 I
+ I     4015  t          + tbar                     I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     4016  e-         + e+                       I   1.693D-10 I  4.570D-09 I on   I  4.570D-09 I
+ I     4017  mu-        + mu+                      I   7.267D-06 I  1.961D-04 I on   I  1.961D-04 I
+ I     4018  tau-       + tau+                     I   2.054D-03 I  5.545D-02 I on   I  5.545D-02 I
+ I     4019  g          + g                        I   1.625D-02 I  4.386D-01 I on   I  4.386D-01 I
+ I                                                 I             I            I      I            I
+ I  3000331  eta_tc0      (m =   350.000)  -->     I   9.511D-02 I  1.000D+00 I on   I  1.000D+00 I
+ I     4020  b          + bbar                     I   4.240D-02 I  4.458D-01 I on   I  4.458D-01 I
+ I     4021  t          + tbar                     I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     4022  g          + g                        I   5.271D-02 I  5.542D-01 I on   I  5.542D-01 I
+ I                                                 I             I            I      I            I
+ I  3000113  rho_tc0      (m =   210.000)  -->     I   7.323D-01 I  1.000D+00 I on   I  1.000D+00 I
+ I     4217  W+         + W-                       I   1.075D-01 I  1.468D-01 I on   I  1.468D-01 I
+ I     4218  W+         + pi_tc-                   I   2.348D-01 I  3.206D-01 I on   I  3.206D-01 I
+ I     4219  pi_tc+     + W-                       I   2.348D-01 I  3.206D-01 I on   I  3.206D-01 I
+ I     4220  pi_tc+     + pi_tc-                   I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     4221  gamma      + pi_tc0                   I   7.128D-02 I  9.733D-02 I on   I  9.733D-02 I
+ I     4222  gamma      + pi'_tc0                  I   2.408D-02 I  3.288D-02 I on   I  3.288D-02 I
+ I     4223  Z0         + pi_tc0                   I   1.311D-03 I  1.791D-03 I on   I  1.791D-03 I
+ I     4224  Z0         + pi'_tc0                  I   5.911D-04 I  8.071D-04 I on   I  8.071D-04 I
+ I     4225  gamma      + Z0                       I   1.243D-02 I  1.698D-02 I on   I  1.698D-02 I
+ I     4226  Z0         + Z0                       I   8.565D-04 I  1.170D-03 I on   I  1.170D-03 I
+ I     4227  d          + dbar                     I   5.287D-03 I  7.219D-03 I on   I  7.219D-03 I
+ I     4228  u          + ubar                     I   7.632D-03 I  1.042D-02 I on   I  1.042D-02 I
+ I     4229  s          + sbar                     I   5.287D-03 I  7.219D-03 I on   I  7.219D-03 I
+ I     4230  c          + cbar                     I   7.632D-03 I  1.042D-02 I on   I  1.042D-02 I
+ I     4231  b          + bbar                     I   5.281D-03 I  7.212D-03 I on   I  7.212D-03 I
+ I     4232  t          + tbar                     I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     4235  e-         + e+                       I   3.403D-03 I  4.647D-03 I on   I  4.647D-03 I
+ I     4236  nu_e       + nu_ebar                  I   1.138D-03 I  1.555D-03 I on   I  1.555D-03 I
+ I     4237  mu-        + mu+                      I   3.403D-03 I  4.647D-03 I on   I  4.647D-03 I
+ I     4238  nu_mu      + nu_mubar                 I   1.138D-03 I  1.555D-03 I on   I  1.555D-03 I
+ I     4239  tau-       + tau+                     I   3.403D-03 I  4.646D-03 I on   I  4.646D-03 I
+ I     4240  nu_tau     + nu_taubar                I   1.138D-03 I  1.555D-03 I on   I  1.555D-03 I
+ I                                                 I             I            I      I            I
+ I  3000213  rho_tc+      (m =   210.000)  -->     I   5.490D-01 I  1.000D+00 I on   I  1.000D+00 I
+ I     4243  W+         + Z0                       I   8.396D-02 I  1.529D-01 I on   I  1.529D-01 I
+ I     4244  W+         + pi_tc0                   I   2.348D-01 I  4.276D-01 I on   I  4.276D-01 I
+ I     4245  pi_tc+     + Z0                       I   9.900D-02 I  1.803D-01 I on   I  1.803D-01 I
+ I     4246  pi_tc+     + pi_tc0                   I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     4247  pi_tc+     + gamma                    I   7.128D-02 I  1.298D-01 I on   I  1.298D-01 I
+ I     4248  W+         + pi'_tc0                  I   4.929D-03 I  8.979D-03 I on   I  8.979D-03 I
+ I     4249  W+         + gamma                    I   1.445D-02 I  2.633D-02 I on   I  2.633D-02 I
+ I     4250  dbar       + u                        I   1.250D-02 I  2.277D-02 I on   I  2.277D-02 I
+ I     4251  dbar       + c                        I   6.417D-04 I  1.169D-03 I on   I  1.169D-03 I
+ I     4252  dbar       + t                        I   4.958D-08 I  9.032D-08 I on   I  9.032D-08 I
+ I     4254  sbar       + u                        I   6.418D-04 I  1.169D-03 I on   I  1.169D-03 I
+ I     4255  sbar       + c                        I   1.247D-02 I  2.272D-02 I on   I  2.272D-02 I
+ I     4256  sbar       + t                        I   2.909D-06 I  5.298D-06 I on   I  5.298D-06 I
+ I     4258  bbar       + u                        I   3.939D-07 I  7.175D-07 I on   I  7.175D-07 I
+ I     4259  bbar       + c                        I   2.311D-05 I  4.209D-05 I on   I  4.209D-05 I
+ I     4260  bbar       + t                        I   1.635D-03 I  2.977D-03 I on   I  2.977D-03 I
+ I     4266  e+         + nu_e                     I   4.229D-03 I  7.703D-03 I on   I  7.703D-03 I
+ I     4267  mu+        + nu_mu                    I   4.229D-03 I  7.703D-03 I on   I  7.703D-03 I
+ I     4268  tau+       + nu_tau                   I   4.228D-03 I  7.702D-03 I on   I  7.702D-03 I
+ I                                                 I             I            I      I            I
+ I  3000223  omega_tc     (m =   210.000)  -->     I   1.780D-01 I  1.000D+00 I on   I  1.000D+00 I
+ I     4270  gamma      + pi_tc0                   I   2.568D-02 I  1.443D-01 I on   I  1.443D-01 I
+ I     4271  Z0         + pi_tc0                   I   6.305D-04 I  3.542D-03 I on   I  3.542D-03 I
+ I     4272  gamma      + pi'_tc0                  I   6.682D-02 I  3.754D-01 I on   I  3.754D-01 I
+ I     4273  Z0         + pi'_tc0                  I   1.229D-03 I  6.906D-03 I on   I  6.906D-03 I
+ I     4274  W+         + pi_tc-                   I   5.765D-03 I  3.239D-02 I on   I  3.239D-02 I
+ I     4275  pi_tc+     + W-                       I   5.765D-03 I  3.239D-02 I on   I  3.239D-02 I
+ I     4276  W+         + W-                       I   5.026D-03 I  2.823D-02 I on   I  2.823D-02 I
+ I     4277  pi_tc+     + pi_tc-                   I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     4278  gamma      + Z0                       I   4.479D-03 I  2.516D-02 I on   I  2.516D-02 I
+ I     4279  Z0         + Z0                       I   4.118D-04 I  2.313D-03 I on   I  2.313D-03 I
+ I     4280  d          + dbar                     I   3.755D-03 I  2.109D-02 I on   I  2.109D-02 I
+ I     4281  u          + ubar                     I   9.724D-03 I  5.463D-02 I on   I  5.463D-02 I
+ I     4282  s          + sbar                     I   3.754D-03 I  2.109D-02 I on   I  2.109D-02 I
+ I     4283  c          + cbar                     I   9.723D-03 I  5.462D-02 I on   I  5.462D-02 I
+ I     4284  b          + bbar                     I   3.743D-03 I  2.103D-02 I on   I  2.103D-02 I
+ I     4285  t          + tbar                     I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     4288  e-         + e+                       I   8.131D-03 I  4.568D-02 I on   I  4.568D-02 I
+ I     4289  nu_e       + nu_ebar                  I   2.368D-03 I  1.330D-02 I on   I  1.330D-02 I
+ I     4290  mu-        + mu+                      I   8.131D-03 I  4.568D-02 I on   I  4.568D-02 I
+ I     4291  nu_mu      + nu_mubar                 I   2.368D-03 I  1.330D-02 I on   I  1.330D-02 I
+ I     4292  tau-       + tau+                     I   8.130D-03 I  4.567D-02 I on   I  4.567D-02 I
+ I     4293  nu_tau     + nu_taubar                I   2.368D-03 I  1.330D-02 I on   I  1.330D-02 I
+ I                                                 I             I            I      I            I
+ I  3100021  V8_tc        (m =   500.000)  -->     I   2.005D+02 I  1.000D+00 I on   I  1.000D+00 I
+ I     4023  d          + dbar                     I   6.716D-01 I  3.350D-03 I on   I  3.350D-03 I
+ I     4024  u          + ubar                     I   6.716D-01 I  3.350D-03 I on   I  3.350D-03 I
+ I     4025  s          + sbar                     I   6.716D-01 I  3.350D-03 I on   I  3.350D-03 I
+ I     4026  c          + cbar                     I   6.716D-01 I  3.350D-03 I on   I  3.350D-03 I
+ I     4027  b          + bbar                     I   1.047D+02 I  5.223D-01 I on   I  5.223D-01 I
+ I     4028  t          + tbar                     I   9.309D+01 I  4.643D-01 I on   I  4.643D-01 I
+ I                                                 I             I            I      I            I
+ I  3100111  pi_22_1_tc   (m =   125.000)  -->     I   2.296D-02 I  1.000D+00 I on   I  1.000D+00 I
+ I     4029  d          + dbar                     I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     4030  u          + ubar                     I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     4031  s          + sbar                     I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     4032  c          + cbar                     I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     4033  b          + bbar                     I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     4034  t          + tbar                     I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     4035  g          + g                        I   2.296D-02 I  1.000D+00 I on   I  1.000D+00 I
+ I                                                 I             I            I      I            I
+ I  3200111  pi_22_8_tc   (m =   250.000)  -->     I   1.889D-01 I  1.000D+00 I on   I  1.000D+00 I
+ I     4036  d          + dbar                     I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     4037  u          + ubar                     I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     4038  s          + sbar                     I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     4039  c          + cbar                     I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     4040  b          + bbar                     I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     4041  t          + tbar                     I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     4042  g          + g                        I   1.889D-01 I  1.000D+00 I on   I  1.000D+00 I
+ I                                                 I             I            I      I            I
+ I  3100113  rho_11_tc    (m =   400.000)  -->     I   1.275D+02 I  1.000D+00 I on   I  1.000D+00 I
+ I     4043  d          + dbar                     I   1.767D+00 I  1.385D-02 I on   I  1.385D-02 I
+ I     4044  u          + ubar                     I   1.767D+00 I  1.385D-02 I on   I  1.385D-02 I
+ I     4045  s          + sbar                     I   1.767D+00 I  1.385D-02 I on   I  1.385D-02 I
+ I     4046  c          + cbar                     I   1.767D+00 I  1.385D-02 I on   I  1.385D-02 I
+ I     4047  b          + bbar                     I   7.177D+01 I  5.627D-01 I on   I  5.627D-01 I
+ I     4048  t          + tbar                     I   4.804D+01 I  3.767D-01 I on   I  3.767D-01 I
+ I     4049  g          + g                        I   6.607D-01 I  5.180D-03 I on   I  5.180D-03 I
+ I                                                 I             I            I      I            I
+ I  3200113  rho_12_tc    (m =   350.000)  -->     I   8.201D+00 I  1.000D+00 I on   I  1.000D+00 I
+ I     4050  d          + dbar                     I   5.129D-02 I  6.254D-03 I on   I  6.254D-03 I
+ I     4051  u          + ubar                     I   5.129D-02 I  6.254D-03 I on   I  6.254D-03 I
+ I     4052  s          + sbar                     I   5.129D-02 I  6.254D-03 I on   I  6.254D-03 I
+ I     4053  c          + cbar                     I   5.129D-02 I  6.254D-03 I on   I  6.254D-03 I
+ I     4054  b          + bbar                     I   7.996D+00 I  9.750D-01 I on   I  9.750D-01 I
+ I     4055  t          + tbar                     I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I                                                 I             I            I      I            I
+ I  3300113  rho_21_tc    (m =   350.000)  -->     I   0.000D+00 I  1.000D+00 I on   I  0.000D+00 I
+ I     4056  d          + dbar                     I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     4057  u          + ubar                     I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     4058  s          + sbar                     I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     4059  c          + cbar                     I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     4060  b          + bbar                     I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     4061  t          + tbar                     I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I                                                 I             I            I      I            I
+ I  3400113  rho_22_tc    (m =   300.000)  -->     I   2.772D+00 I  1.000D+00 I on   I  1.000D+00 I
+ I     4062  d          + dbar                     I   4.345D-01 I  1.568D-01 I on   I  1.568D-01 I
+ I     4063  u          + ubar                     I   4.345D-01 I  1.568D-01 I on   I  1.568D-01 I
+ I     4064  s          + sbar                     I   4.345D-01 I  1.568D-01 I on   I  1.568D-01 I
+ I     4065  c          + cbar                     I   4.345D-01 I  1.568D-01 I on   I  1.568D-01 I
+ I     4066  b          + bbar                     I   4.498D-02 I  1.623D-02 I on   I  1.623D-02 I
+ I     4067  t          + tbar                     I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     4068  g          + g                        I   5.336D-01 I  1.925D-01 I on   I  1.925D-01 I
+ I     4069  pi_22_1_tc + g                        I   3.634D-01 I  1.311D-01 I on   I  1.311D-01 I
+ I     4070  pi_22_8_tc + g                        I   9.188D-02 I  3.315D-02 I on   I  3.315D-02 I
+ I                                                 I             I            I      I            I
+ I  4000001  d*           (m =   400.000)  -->     I   2.594D+00 I  1.000D+00 I on   I  1.000D+00 I
+ I     4071  g          + d                        I   2.207D+00 I  8.510D-01 I on   I  8.510D-01 I
+ I     4072  gamma      + d                        I   1.403D-02 I  5.411D-03 I on   I  5.411D-03 I
+ I     4073  Z0         + d                        I   1.168D-01 I  4.503D-02 I on   I  4.503D-02 I
+ I     4074  W-         + u                        I   2.557D-01 I  9.859D-02 I on   I  9.859D-02 I
+ I                                                 I             I            I      I            I
+ I  4000002  u*           (m =   400.000)  -->     I   2.597D+00 I  1.000D+00 I on   I  1.000D+00 I
+ I     4075  g          + u                        I   2.207D+00 I  8.499D-01 I on   I  8.499D-01 I
+ I     4076  gamma      + u                        I   5.614D-02 I  2.162D-02 I on   I  2.162D-02 I
+ I     4077  Z0         + u                        I   7.795D-02 I  3.002D-02 I on   I  3.002D-02 I
+ I     4078  W+         + d                        I   2.557D-01 I  9.847D-02 I on   I  9.847D-02 I
+ I                                                 I             I            I      I            I
+ I  4000011  e*-          (m =   400.000)  -->     I   4.290D-01 I  1.000D+00 I on   I  1.000D+00 I
+ I     4079  gamma      + e-                       I   1.263D-01 I  2.944D-01 I on   I  2.944D-01 I
+ I     4080  Z0         + e-                       I   4.695D-02 I  1.094D-01 I on   I  1.094D-01 I
+ I     4081  W-         + nu_e                     I   2.557D-01 I  5.961D-01 I on   I  5.961D-01 I
+ I                                                 I             I            I      I            I
+ I  4000012  nu*_e0       (m =   400.000)  -->     I   4.191D-01 I  1.000D+00 I on   I  1.000D+00 I
+ I     4082  Z0         + nu_e                     I   1.634D-01 I  3.899D-01 I on   I  3.899D-01 I
+ I     4083  W+         + e-                       I   2.557D-01 I  6.101D-01 I on   I  6.101D-01 I
+ I                                                 I             I            I      I            I
+ I  5000039  Graviton*    (m =  1000.000)  -->     I   1.415D-01 I  1.000D+00 I on   I  1.000D+00 I
+ I     4084  d          + dbar                     I   8.959D-03 I  6.330D-02 I on   I  6.330D-02 I
+ I     4085  u          + ubar                     I   8.959D-03 I  6.330D-02 I on   I  6.330D-02 I
+ I     4086  s          + sbar                     I   8.959D-03 I  6.330D-02 I on   I  6.330D-02 I
+ I     4087  c          + cbar                     I   8.959D-03 I  6.330D-02 I on   I  6.330D-02 I
+ I     4088  b          + bbar                     I   8.958D-03 I  6.329D-02 I on   I  6.329D-02 I
+ I     4089  t          + tbar                     I   7.965D-03 I  5.628D-02 I on   I  5.628D-02 I
+ I     4092  e-         + e+                       I   2.901D-03 I  2.049D-02 I on   I  2.049D-02 I
+ I     4093  nu_e       + nu_ebar                  I   2.901D-03 I  2.049D-02 I on   I  2.049D-02 I
+ I     4094  mu-        + mu+                      I   2.901D-03 I  2.049D-02 I on   I  2.049D-02 I
+ I     4095  nu_mu      + nu_mubar                 I   2.901D-03 I  2.049D-02 I on   I  2.049D-02 I
+ I     4096  tau-       + tau+                     I   2.901D-03 I  2.049D-02 I on   I  2.049D-02 I
+ I     4097  nu_tau     + nu_taubar                I   2.901D-03 I  2.049D-02 I on   I  2.049D-02 I
+ I     4100  g          + g                        I   4.641D-02 I  3.279D-01 I on   I  3.279D-01 I
+ I     4101  gamma      + gamma                    I   5.801D-03 I  4.099D-02 I on   I  4.099D-02 I
+ I     4102  Z0         + Z0                       I   6.402D-03 I  4.524D-02 I on   I  4.524D-02 I
+ I     4103  W+         + W-                       I   1.275D-02 I  9.011D-02 I on   I  9.011D-02 I
+ I                                                 I             I            I      I            I
+ I  9900012  nu_Re        (m =   500.000)  -->     I   9.766D-04 I  1.000D+00 I on   I  1.000D+00 I
+ I     4104  e-         + dbar       + u           I   1.941D-04 I  1.987D-01 I on   I  1.987D-01 I
+ I     4105  e-         + dbar       + c           I   9.966D-06 I  1.020D-02 I on   I  1.020D-02 I
+ I     4106  e-         + dbar       + t           I   2.517D-09 I  2.578D-06 I on   I  2.578D-06 I
+ I     4107  e-         + sbar       + u           I   9.966D-06 I  1.020D-02 I on   I  1.020D-02 I
+ I     4108  e-         + sbar       + c           I   1.937D-04 I  1.984D-01 I on   I  1.984D-01 I
+ I     4109  e-         + sbar       + t           I   1.474D-07 I  1.510D-04 I on   I  1.510D-04 I
+ I     4110  e-         + bbar       + u           I   6.117D-09 I  6.263D-06 I on   I  6.263D-06 I
+ I     4111  e-         + bbar       + c           I   3.587D-07 I  3.673D-04 I on   I  3.673D-04 I
+ I     4112  e-         + bbar       + t           I   8.005D-05 I  8.197D-02 I on   I  8.197D-02 I
+ I     4113  e+         + d          + ubar        I   1.941D-04 I  1.987D-01 I on   I  1.987D-01 I
+ I     4114  e+         + d          + cbar        I   9.966D-06 I  1.020D-02 I on   I  1.020D-02 I
+ I     4115  e+         + d          + tbar        I   2.517D-09 I  2.578D-06 I on   I  2.578D-06 I
+ I     4116  e+         + s          + ubar        I   9.966D-06 I  1.020D-02 I on   I  1.020D-02 I
+ I     4117  e+         + s          + cbar        I   1.937D-04 I  1.984D-01 I on   I  1.984D-01 I
+ I     4118  e+         + s          + tbar        I   1.474D-07 I  1.510D-04 I on   I  1.510D-04 I
+ I     4119  e+         + b          + ubar        I   6.117D-09 I  6.263D-06 I on   I  6.263D-06 I
+ I     4120  e+         + b          + cbar        I   3.587D-07 I  3.673D-04 I on   I  3.673D-04 I
+ I     4121  e+         + b          + tbar        I   8.005D-05 I  8.197D-02 I on   I  8.197D-02 I
+ I     4122  e-         + mu+        + nu_Rmu      I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     4123  e+         + mu-        + nu_Rmu      I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     4124  e-         + tau+       + nu_Rtau     I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     4125  e+         + tau-       + nu_Rtau     I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I                                                 I             I            I      I            I
+ I  9900014  nu_Rmu       (m =   500.000)  -->     I   9.764D-04 I  1.000D+00 I on   I  1.000D+00 I
+ I     4126  mu-        + dbar       + u           I   1.941D-04 I  1.988D-01 I on   I  1.988D-01 I
+ I     4127  mu-        + dbar       + c           I   9.966D-06 I  1.021D-02 I on   I  1.021D-02 I
+ I     4128  mu-        + dbar       + t           I   2.515D-09 I  2.575D-06 I on   I  2.575D-06 I
+ I     4129  mu-        + sbar       + u           I   9.966D-06 I  1.021D-02 I on   I  1.021D-02 I
+ I     4130  mu-        + sbar       + c           I   1.937D-04 I  1.984D-01 I on   I  1.984D-01 I
+ I     4131  mu-        + sbar       + t           I   1.473D-07 I  1.508D-04 I on   I  1.508D-04 I
+ I     4132  mu-        + bbar       + u           I   6.117D-09 I  6.264D-06 I on   I  6.264D-06 I
+ I     4133  mu-        + bbar       + c           I   3.587D-07 I  3.674D-04 I on   I  3.674D-04 I
+ I     4134  mu-        + bbar       + t           I   7.996D-05 I  8.189D-02 I on   I  8.189D-02 I
+ I     4135  mu+        + d          + ubar        I   1.941D-04 I  1.988D-01 I on   I  1.988D-01 I
+ I     4136  mu+        + d          + cbar        I   9.966D-06 I  1.021D-02 I on   I  1.021D-02 I
+ I     4137  mu+        + d          + tbar        I   2.515D-09 I  2.575D-06 I on   I  2.575D-06 I
+ I     4138  mu+        + s          + ubar        I   9.966D-06 I  1.021D-02 I on   I  1.021D-02 I
+ I     4139  mu+        + s          + cbar        I   1.937D-04 I  1.984D-01 I on   I  1.984D-01 I
+ I     4140  mu+        + s          + tbar        I   1.473D-07 I  1.508D-04 I on   I  1.508D-04 I
+ I     4141  mu+        + b          + ubar        I   6.117D-09 I  6.264D-06 I on   I  6.264D-06 I
+ I     4142  mu+        + b          + cbar        I   3.587D-07 I  3.674D-04 I on   I  3.674D-04 I
+ I     4143  mu+        + b          + tbar        I   7.996D-05 I  8.189D-02 I on   I  8.189D-02 I
+ I     4144  mu-        + e+         + nu_Re       I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     4145  mu+        + e-         + nu_Re       I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     4146  mu-        + tau+       + nu_Rtau     I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     4147  mu+        + tau-       + nu_Rtau     I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I                                                 I             I            I      I            I
+ I  9900016  nu_Rtau      (m =   500.000)  -->     I   9.735D-04 I  1.000D+00 I on   I  1.000D+00 I
+ I     4148  tau-       + dbar       + u           I   1.941D-04 I  1.993D-01 I on   I  1.993D-01 I
+ I     4149  tau-       + dbar       + c           I   9.963D-06 I  1.023D-02 I on   I  1.023D-02 I
+ I     4150  tau-       + dbar       + t           I   2.473D-09 I  2.540D-06 I on   I  2.540D-06 I
+ I     4151  tau-       + sbar       + u           I   9.964D-06 I  1.024D-02 I on   I  1.024D-02 I
+ I     4152  tau-       + sbar       + c           I   1.937D-04 I  1.989D-01 I on   I  1.989D-01 I
+ I     4153  tau-       + sbar       + t           I   1.448D-07 I  1.488D-04 I on   I  1.488D-04 I
+ I     4154  tau-       + bbar       + u           I   6.113D-09 I  6.279D-06 I on   I  6.279D-06 I
+ I     4155  tau-       + bbar       + c           I   3.585D-07 I  3.682D-04 I on   I  3.682D-04 I
+ I     4156  tau-       + bbar       + t           I   7.859D-05 I  8.073D-02 I on   I  8.073D-02 I
+ I     4157  tau+       + d          + ubar        I   1.941D-04 I  1.993D-01 I on   I  1.993D-01 I
+ I     4158  tau+       + d          + cbar        I   9.963D-06 I  1.023D-02 I on   I  1.023D-02 I
+ I     4159  tau+       + d          + tbar        I   2.473D-09 I  2.540D-06 I on   I  2.540D-06 I
+ I     4160  tau+       + s          + ubar        I   9.964D-06 I  1.024D-02 I on   I  1.024D-02 I
+ I     4161  tau+       + s          + cbar        I   1.937D-04 I  1.989D-01 I on   I  1.989D-01 I
+ I     4162  tau+       + s          + tbar        I   1.448D-07 I  1.488D-04 I on   I  1.488D-04 I
+ I     4163  tau+       + b          + ubar        I   6.113D-09 I  6.279D-06 I on   I  6.279D-06 I
+ I     4164  tau+       + b          + cbar        I   3.585D-07 I  3.682D-04 I on   I  3.682D-04 I
+ I     4165  tau+       + b          + tbar        I   7.859D-05 I  8.073D-02 I on   I  8.073D-02 I
+ I     4166  tau-       + e+         + nu_Re       I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     4167  tau+       + e-         + nu_Re       I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     4168  tau-       + mu+        + nu_Rmu      I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     4169  tau+       + mu-        + nu_Rmu      I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I                                                 I             I            I      I            I
+ I  9900023  Z_R0         (m =  1200.000)  -->     I   2.672D+01 I  1.000D+00 I on   I  1.000D+00 I
+ I     4170  d          + dbar                     I   4.937D+00 I  1.847D-01 I on   I  1.847D-01 I
+ I     4171  u          + ubar                     I   2.795D+00 I  1.046D-01 I on   I  1.046D-01 I
+ I     4172  s          + sbar                     I   4.937D+00 I  1.847D-01 I on   I  1.847D-01 I
+ I     4173  c          + cbar                     I   2.795D+00 I  1.046D-01 I on   I  1.046D-01 I
+ I     4174  b          + bbar                     I   4.937D+00 I  1.847D-01 I on   I  1.847D-01 I
+ I     4175  t          + tbar                     I   2.561D+00 I  9.582D-02 I on   I  9.582D-02 I
+ I     4176  e-         + e+                       I   6.120D-01 I  2.290D-02 I on   I  2.290D-02 I
+ I     4177  nu_e       + nu_ebar                  I   2.253D-01 I  8.429D-03 I on   I  8.429D-03 I
+ I     4178  nu_Re      + nu_Re                    I   4.169D-01 I  1.560D-02 I on   I  1.560D-02 I
+ I     4179  mu-        + mu+                      I   6.120D-01 I  2.290D-02 I on   I  2.290D-02 I
+ I     4180  nu_mu      + nu_mubar                 I   2.253D-01 I  8.429D-03 I on   I  8.429D-03 I
+ I     4181  nu_Rmu     + nu_Rmu                   I   4.169D-01 I  1.560D-02 I on   I  1.560D-02 I
+ I     4182  tau-       + tau+                     I   6.120D-01 I  2.290D-02 I on   I  2.290D-02 I
+ I     4183  nu_tau     + nu_taubar                I   2.253D-01 I  8.429D-03 I on   I  8.429D-03 I
+ I     4184  nu_Rtau    + nu_Rtau                  I   4.169D-01 I  1.560D-02 I on   I  1.560D-02 I
+ I                                                 I             I            I      I            I
+ I  9900024  W_R+         (m =   750.000)  -->     I   2.175D+01 I  1.000D+00 I on   I  1.000D+00 I
+ I     4185  dbar       + u                        I   6.298D+00 I  2.896D-01 I on   I  2.896D-01 I
+ I     4186  dbar       + c                        I   3.234D-01 I  1.487D-02 I on   I  1.487D-02 I
+ I     4187  dbar       + t                        I   1.825D-04 I  8.389D-06 I on   I  8.389D-06 I
+ I     4188  sbar       + u                        I   3.234D-01 I  1.487D-02 I on   I  1.487D-02 I
+ I     4189  sbar       + c                        I   6.287D+00 I  2.891D-01 I on   I  2.891D-01 I
+ I     4190  sbar       + t                        I   1.070D-02 I  4.921D-04 I on   I  4.921D-04 I
+ I     4191  bbar       + u                        I   1.986D-04 I  9.134D-06 I on   I  9.134D-06 I
+ I     4192  bbar       + c                        I   1.165D-02 I  5.358D-04 I on   I  5.358D-04 I
+ I     4193  bbar       + t                        I   6.070D+00 I  2.791D-01 I on   I  2.791D-01 I
+ I     4194  e+         + nu_Re                    I   8.080D-01 I  3.715D-02 I on   I  3.715D-02 I
+ I     4195  mu+        + nu_Rmu                   I   8.080D-01 I  3.715D-02 I on   I  3.715D-02 I
+ I     4196  tau+       + nu_Rtau                  I   8.080D-01 I  3.715D-02 I on   I  3.715D-02 I
+ I                                                 I             I            I      I            I
+ I  9900041  H_L++        (m =   200.000)  -->     I   8.816D-01 I  1.000D+00 I on   I  1.000D+00 I
+ I     4197  e+         + e+                       I   7.958D-02 I  9.027D-02 I on   I  9.027D-02 I
+ I     4198  e+         + mu+                      I   1.592D-03 I  1.805D-03 I on   I  1.805D-03 I
+ I     4199  e+         + tau+                     I   1.591D-03 I  1.805D-03 I on   I  1.805D-03 I
+ I     4200  mu+        + mu+                      I   7.958D-02 I  9.027D-02 I on   I  9.027D-02 I
+ I     4201  mu+        + tau+                     I   1.591D-03 I  1.805D-03 I on   I  1.805D-03 I
+ I     4202  tau+       + tau+                     I   7.161D-01 I  8.123D-01 I on   I  8.123D-01 I
+ I     4203  W+         + W+                       I   1.578D-03 I  1.790D-03 I on   I  1.790D-03 I
+ I                                                 I             I            I      I            I
+ I  9900042  H_R++        (m =   200.000)  -->     I   8.800D-01 I  1.000D+00 I on   I  1.000D+00 I
+ I     4204  e+         + e+                       I   7.958D-02 I  9.043D-02 I on   I  9.043D-02 I
+ I     4205  e+         + mu+                      I   1.592D-03 I  1.809D-03 I on   I  1.809D-03 I
+ I     4206  e+         + tau+                     I   1.591D-03 I  1.808D-03 I on   I  1.808D-03 I
+ I     4207  mu+        + mu+                      I   7.958D-02 I  9.043D-02 I on   I  9.043D-02 I
+ I     4208  mu+        + tau+                     I   1.591D-03 I  1.808D-03 I on   I  1.808D-03 I
+ I     4209  tau+       + tau+                     I   7.161D-01 I  8.137D-01 I on   I  8.137D-01 I
+ I     4210  W_R+       + W_R+                     I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I                                                 I             I            I      I            I
+ I  9900443  cc~[3S18]    (m =     3.100)  -->     I   1.000D-02 I  1.000D+00 I on   I  1.000D+00 I
+ I     4211  J/psi      + g                        I   1.000D-02 I  1.000D+00 I on   I  1.000D+00 I
+ I                                                 I             I            I      I            I
+ I  9900441  cc~[1S08]    (m =     3.100)  -->     I   1.000D-02 I  1.000D+00 I on   I  1.000D+00 I
+ I     4212  J/psi      + g                        I   1.000D-02 I  1.000D+00 I on   I  1.000D+00 I
+ I                                                 I             I            I      I            I
+ I  9910441  cc~[3P08]    (m =     3.100)  -->     I   1.000D-02 I  1.000D+00 I on   I  1.000D+00 I
+ I     4213  J/psi      + g                        I   1.000D-02 I  1.000D+00 I on   I  1.000D+00 I
+ I                                                 I             I            I      I            I
+ I  9900553  bb~[3S18]    (m =     9.500)  -->     I   1.000D-02 I  1.000D+00 I on   I  1.000D+00 I
+ I     4214  Upsilon    + g                        I   1.000D-02 I  1.000D+00 I on   I  1.000D+00 I
+ I                                                 I             I            I      I            I
+ I  9900551  bb~[1S08]    (m =     9.500)  -->     I   1.000D-02 I  1.000D+00 I on   I  1.000D+00 I
+ I     4215  Upsilon    + g                        I   1.000D-02 I  1.000D+00 I on   I  1.000D+00 I
+ I                                                 I             I            I      I            I
+ I  9910551  bb~[3P08]    (m =     9.500)  -->     I   1.000D-02 I  1.000D+00 I on   I  1.000D+00 I
+ I     4216  Upsilon    + g                        I   1.000D-02 I  1.000D+00 I on   I  1.000D+00 I
+ I                                                 I             I            I      I            I
+ I  3000115  a_tc0        (m =   250.000)  -->     I   2.925D-01 I  1.000D+00 I on   I  1.000D+00 I
+ I     4296  W+         + W-                       I   2.822D-02 I  9.648D-02 I on   I  9.648D-02 I
+ I     4297  W+         + pi_tc-                   I   8.153D-02 I  2.788D-01 I on   I  2.788D-01 I
+ I     4298  W-         + pi_tc+                   I   8.153D-02 I  2.788D-01 I on   I  2.788D-01 I
+ I     4299  Z0         + pi'_tc0                  I   3.100D-02 I  1.060D-01 I on   I  1.060D-01 I
+ I     4300  gamma      + rho_tc0                  I   6.030D-03 I  2.062D-02 I on   I  2.062D-02 I
+ I     4301  gamma      + omega_tc                 I   2.173D-03 I  7.428D-03 I on   I  7.428D-03 I
+ I     4302  W+         + rho_tc-                  I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     4303  W-         + rho_tc+                  I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     4304  Z0         + rho_tc0                  I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     4305  Z0         + omega_tc                 I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     4306  d          + dbar                     I   9.516D-03 I  3.253D-02 I on   I  3.253D-02 I
+ I     4307  u          + ubar                     I   7.379D-03 I  2.523D-02 I on   I  2.523D-02 I
+ I     4308  s          + sbar                     I   9.515D-03 I  3.253D-02 I on   I  3.253D-02 I
+ I     4309  c          + cbar                     I   7.378D-03 I  2.523D-02 I on   I  2.523D-02 I
+ I     4310  b          + bbar                     I   9.501D-03 I  3.248D-02 I on   I  3.248D-02 I
+ I     4311  t          + tbar                     I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     4314  e-         + e+                       I   2.086D-03 I  7.131D-03 I on   I  7.131D-03 I
+ I     4315  nu_e       + nu_ebar                  I   4.150D-03 I  1.419D-02 I on   I  1.419D-02 I
+ I     4316  mu-        + mu+                      I   2.086D-03 I  7.131D-03 I on   I  7.131D-03 I
+ I     4317  nu_mu      + nu_mubar                 I   4.150D-03 I  1.419D-02 I on   I  1.419D-02 I
+ I     4318  tau-       + tau+                     I   2.085D-03 I  7.128D-03 I on   I  7.128D-03 I
+ I     4319  nu_tau     + nu_taubar                I   4.150D-03 I  1.419D-02 I on   I  1.419D-02 I
+ I                                                 I             I            I      I            I
+ I  3000215  a_tc+        (m =   250.000)  -->     I   2.697D-01 I  1.000D+00 I on   I  1.000D+00 I
+ I     4322  gamma      + W+                       I   1.021D-02 I  3.785D-02 I on   I  3.785D-02 I
+ I     4323  gamma      + pi_tc+                   I   5.959D-02 I  2.209D-01 I on   I  2.209D-01 I
+ I     4324  Z0         + W+                       I   9.946D-03 I  3.687D-02 I on   I  3.687D-02 I
+ I     4325  W+         + pi_tc0                   I   8.153D-02 I  3.023D-01 I on   I  3.023D-01 I
+ I     4326  W+         + pi'_tc0                  I   3.056D-02 I  1.133D-01 I on   I  1.133D-01 I
+ I     4327  Z0         + pi_tc+                   I   3.114D-02 I  1.155D-01 I on   I  1.155D-01 I
+ I     4328  gamma      + rho_tc+                  I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     4329  W+         + rho_tc0                  I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     4330  W+         + omega_tc                 I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     4331  Z0         + rho_tc+                  I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     4332  dbar       + u                        I   1.352D-02 I  5.013D-02 I on   I  5.013D-02 I
+ I     4333  dbar       + c                        I   6.943D-04 I  2.574D-03 I on   I  2.574D-03 I
+ I     4334  dbar       + t                        I   1.381D-07 I  5.120D-07 I on   I  5.120D-07 I
+ I     4336  sbar       + u                        I   6.943D-04 I  2.574D-03 I on   I  2.574D-03 I
+ I     4337  sbar       + c                        I   1.350D-02 I  5.003D-02 I on   I  5.003D-02 I
+ I     4338  sbar       + t                        I   8.102D-06 I  3.004D-05 I on   I  3.004D-05 I
+ I     4340  bbar       + u                        I   4.262D-07 I  1.580D-06 I on   I  1.580D-06 I
+ I     4341  bbar       + c                        I   2.500D-05 I  9.270D-05 I on   I  9.270D-05 I
+ I     4342  bbar       + t                        I   4.585D-03 I  1.700D-02 I on   I  1.700D-02 I
+ I     4348  e+         + nu_e                     I   4.578D-03 I  1.697D-02 I on   I  1.697D-02 I
+ I     4349  mu+        + nu_mu                    I   4.578D-03 I  1.697D-02 I on   I  1.697D-02 I
+ I     4350  tau+       + nu_tau                   I   4.578D-03 I  1.697D-02 I on   I  1.697D-02 I
+ I                                                 I             I            I      I            I
+ I  6100001  d*_S         (m =   586.000)  -->     I   0.000D+00 I  1.000D+00 I on   I  0.000D+00 I
+ I     5001  Z*0        + d                        I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     5002  gamma*     + d                        I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I                                                 I             I            I      I            I
+ I  6100002  u*_S         (m =   588.000)  -->     I   0.000D+00 I  1.000D+00 I on   I  0.000D+00 I
+ I     5003  Z*0        + u                        I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     5004  gamma*     + u                        I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I                                                 I             I            I      I            I
+ I  6100003  s*_S         (m =   586.000)  -->     I   0.000D+00 I  1.000D+00 I on   I  0.000D+00 I
+ I     5005  Z*0        + s                        I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     5006  gamma*     + s                        I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I                                                 I             I            I      I            I
+ I  6100004  c*_S         (m =   588.000)  -->     I   0.000D+00 I  1.000D+00 I on   I  0.000D+00 I
+ I     5007  Z*0        + c                        I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     5008  gamma*     + c                        I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I                                                 I             I            I      I            I
+ I  6100005  b*_S         (m =   586.000)  -->     I   0.000D+00 I  1.000D+00 I on   I  0.000D+00 I
+ I     5009  Z*0        + b                        I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     5010  gamma*     + b                        I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I                                                 I             I            I      I            I
+ I  6100006  t*_S         (m =   586.000)  -->     I   0.000D+00 I  1.000D+00 I off  I  0.000D+00 I
+ I     5011  Z*0        + t                        I   0.000D+00 I  0.000D+00 I off  I  0.000D+00 I
+ I     5012  gamma*     + t                        I   0.000D+00 I  0.000D+00 I off  I  0.000D+00 I
+ I                                                 I             I            I      I            I
+ I  5100001  d*_D         (m =   598.000)  -->     I   0.000D+00 I  1.000D+00 I on   I  0.000D+00 I
+ I     5013  Z*0        + d                        I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     5014  W*-        + u                        I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     5015  gamma*     + d                        I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I                                                 I             I            I      I            I
+ I  5100002  u*_D         (m =   598.000)  -->     I   0.000D+00 I  1.000D+00 I on   I  0.000D+00 I
+ I     5016  Z*0        + u                        I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     5017  W*+        + d                        I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     5018  gamma*     + u                        I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I                                                 I             I            I      I            I
+ I  5100003  s*_D         (m =   598.000)  -->     I   0.000D+00 I  1.000D+00 I on   I  0.000D+00 I
+ I     5019  Z*0        + s                        I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     5020  W*-        + c                        I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     5021  gamma*     + s                        I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I                                                 I             I            I      I            I
+ I  5100004  c*_D         (m =   598.000)  -->     I   0.000D+00 I  1.000D+00 I on   I  0.000D+00 I
+ I     5022  Z*0        + c                        I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     5023  W*+        + s                        I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     5024  gamma*     + c                        I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I                                                 I             I            I      I            I
+ I  5100005  b*_D         (m =   598.000)  -->     I   0.000D+00 I  1.000D+00 I on   I  0.000D+00 I
+ I     5025  Z*0        + b                        I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     5026  W*-        + t                        I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     5027  gamma*     + b                        I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I                                                 I             I            I      I            I
+ I  5100006  t*_D         (m =   598.000)  -->     I   0.000D+00 I  1.000D+00 I off  I  0.000D+00 I
+ I     5028  Z*0        + t                        I   0.000D+00 I  0.000D+00 I off  I  0.000D+00 I
+ I     5029  W*+        + b                        I   0.000D+00 I  0.000D+00 I off  I  0.000D+00 I
+ I     5030  gamma*     + t                        I   0.000D+00 I  0.000D+00 I off  I  0.000D+00 I
+ I                                                 I             I            I      I            I
+ I  6100011  e*_S-        (m =   505.000)  -->     I   0.000D+00 I  1.000D+00 I on   I  0.000D+00 I
+ I     5031  gamma*     + e-                       I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I                                                 I             I            I      I            I
+ I  6100013  mu*_S-       (m =   505.000)  -->     I   0.000D+00 I  1.000D+00 I on   I  0.000D+00 I
+ I     5032  gamma*     + mu-                      I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I                                                 I             I            I      I            I
+ I  6100015  tau*_S-      (m =   505.000)  -->     I   0.000D+00 I  1.000D+00 I on   I  0.000D+00 I
+ I     5033  gamma*     + tau-                     I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I                                                 I             I            I      I            I
+ I  5100012  nu*_eD       (m =   516.000)  -->     I   0.000D+00 I  1.000D+00 I on   I  0.000D+00 I
+ I     5034  gamma*     + nu_e                     I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I                                                 I             I            I      I            I
+ I  5100011  e*_D-        (m =   516.000)  -->     I   0.000D+00 I  1.000D+00 I on   I  0.000D+00 I
+ I     5035  gamma*     + e-                       I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I                                                 I             I            I      I            I
+ I  5100014  nu*_muD      (m =   516.000)  -->     I   0.000D+00 I  1.000D+00 I on   I  0.000D+00 I
+ I     5036  gamma*     + nu_mu                    I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I                                                 I             I            I      I            I
+ I  5100013  mu*_D-       (m =   516.000)  -->     I   0.000D+00 I  1.000D+00 I on   I  0.000D+00 I
+ I     5037  gamma*     + mu-                      I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I                                                 I             I            I      I            I
+ I  5100016  nu*_tauD     (m =   516.000)  -->     I   0.000D+00 I  1.000D+00 I on   I  0.000D+00 I
+ I     5038  gamma*     + nu_tau                   I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I                                                 I             I            I      I            I
+ I  5100015  tau*_D-      (m =   516.000)  -->     I   0.000D+00 I  1.000D+00 I on   I  0.000D+00 I
+ I     5039  gamma*     + tau-                     I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I                                                 I             I            I      I            I
+ I  5100021  g*           (m =   640.000)  -->     I   0.000D+00 I  1.000D+00 I on   I  0.000D+00 I
+ I     5040  d*_S       + dbar                     I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     5041  u*_S       + ubar                     I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     5042  s*_S       + sbar                     I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     5043  c*_S       + cbar                     I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     5044  b*_S       + bbar                     I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     5045  t*_S       + tbar                     I   0.000D+00 I  0.000D+00 I off  I  0.000D+00 I
+ I     5046  d*_D       + dbar                     I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     5047  u*_D       + ubar                     I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     5048  s*_D       + sbar                     I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     5049  c*_D       + cbar                     I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     5050  b*_D       + bbar                     I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     5051  t*_D       + tbar                     I   0.000D+00 I  0.000D+00 I off  I  0.000D+00 I
+ I     5052  d*_Sbar    + d                        I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     5053  u*_Sbar    + u                        I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     5054  s*_Sbar    + s                        I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     5055  c*_Sbar    + c                        I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     5056  b*_Sbar    + b                        I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     5057  t*_Sbar    + t                        I   0.000D+00 I  0.000D+00 I off  I  0.000D+00 I
+ I     5058  d*_Dbar    + d                        I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     5059  u*_Dbar    + u                        I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     5060  s*_Dbar    + s                        I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     5061  c*_Dbar    + c                        I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     5062  b*_Dbar    + b                        I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     5063  t*_Dbar    + t                        I   0.000D+00 I  0.000D+00 I off  I  0.000D+00 I
+ I                                                 I             I            I      I            I
+ I  5100022  gamma*       (m =   501.000)  -->     I   0.000D+00 I  1.000D+00 I on   I  0.000D+00 I
+ I     5064  Graviton   + gamma                    I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I                                                 I             I            I      I            I
+ I  5100023  Z*0          (m =   536.000)  -->     I   0.000D+00 I  1.000D+00 I on   I  0.000D+00 I
+ I     5065  e*_S-      + e+                       I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     5066  mu*_S-     + mu+                      I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     5067  tau*_S-    + tau+                     I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     5068  e*_D-      + e+                       I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     5069  mu*_D-     + mu+                      I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     5070  tau*_D-    + tau+                     I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     5071  nu*_eD     + nu_ebar                  I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     5072  nu*_muD    + nu_mubar                 I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     5073  nu*_tauD   + nu_taubar                I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     5074  e*_Sbar+   + e-                       I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     5075  mu*_Sbar+  + mu-                      I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     5076  tau*_Sbar+ + tau-                     I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     5077  e*_Dbar+   + e-                       I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     5078  mu*_Dbar+  + mu-                      I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     5079  tau*_Dbar+ + tau-                     I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     5080  nu*_eDbar  + nu_e                     I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     5081  nu*_muDbar + nu_mu                    I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     5082  nu*_tauDba + nu_tau                   I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I                                                 I             I            I      I            I
+ I  5100024  W*+          (m =   536.000)  -->     I   0.000D+00 I  1.000D+00 I on   I  0.000D+00 I
+ I     5083  e*_Dbar+   + nu_e                     I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     5084  mu*_Dbar+  + nu_mu                    I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     5085  tau*_Dbar+ + nu_tau                   I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     5086  nu*_eD     + e+                       I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     5087  nu*_muD    + mu+                      I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I     5088  nu*_tauD   + tau+                     I   0.000D+00 I  0.000D+00 I on   I  0.000D+00 I
+ I                                                 I             I            I      I            I
+ ==================================================================================================
+1********* PYSTAT:  Statistics on Number of Events and Cross-sections *********
+
+ ==============================================================================
+ I                                  I                            I            I
+ I            Subprocess            I      Number of points      I    Sigma   I
+ I                                  I                            I            I
+ I----------------------------------I----------------------------I    (mb)    I
+ I                                  I                            I            I
+ I N:o Type                         I    Generated         Tried I            I
+ I                                  I                            I            I
+ ==============================================================================
+ I                                  I                            I            I
+ I   0 All included subprocesses    I         1000         86640 I  2.764D+01 I
+ I  11 f + f' -> f + f' (QCD)       I          268             0 I  7.407D+00 I
+ I  12 f + fbar -> f' + fbar'       I            0             0 I  0.000D+00 I
+ I  13 f + fbar -> g + g            I            0             0 I  0.000D+00 I
+ I  28 f + g -> f + g               I          327             0 I  9.037D+00 I
+ I  53 g + g -> f + fbar            I            7             0 I  1.935D-01 I
+ I  68 g + g -> g + g               I          398             0 I  1.100D+01 I
+ I  95 Low-pT scattering            I            0          1014 I  0.000D+00 I
+ I                                  I                            I            I
+ ==============================================================================
+
+ ********* Total number of errors, excluding junctions =        0 *************
+ ********* Total number of errors, including junctions =        0 *************
+ ********* Total number of warnings =                           0 *************
+ ********* Fraction of events that fail fragmentation cuts =  0.01381 *********
+
